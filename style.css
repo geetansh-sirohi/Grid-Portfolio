@@ -1,0 +1,621 @@
+@font-face {
+  font-family: "NorwigeBold";
+  src: url("./assets/fonts/Norwige-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "NorwigeExtraBold";
+  src: url("./assets/fonts/Norwige-ExtraBoldItalic.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* GRID CONTAINER */
+.container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  display: grid;
+  gap: 12px;
+  padding: 2rem;
+  grid-template-columns: 5% 36% 18% 18% 18%;
+  grid-template-rows: 30% 40% 30%;
+  grid-template-areas:
+    "navbar hero heading heading heading"
+    "navbar hero swan swan achievements"
+    "navbar hero apple last last";
+}
+
+/* NAV */
+.nav {
+  grid-area: navbar;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.nav_links {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(-90deg);
+}
+
+/* HERO */
+.main_img {
+  grid-area: hero;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.main-text {
+  position: absolute;
+  top: 14px;
+  left: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.main-text i {
+  font-size: 13px;
+}
+
+.main-text h2 {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.hero-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 35px;
+  z-index: 2;
+}
+
+.intro {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #fff;
+  font-family: "NorwigeBold", sans-serif;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.hero-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-style: normal;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 6px;
+}
+
+.hero-email a {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Segoe UI", sans-serif;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
+.hero-email i {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* PORTFOLIO HEADING */
+.portfolio {
+  grid-area: heading;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio h1 {
+  position: absolute;
+  top: 8px;
+  font-size: 7rem;
+  font-family: "NorwigeExtraBold", sans-serif;
+}
+.portfolio i {
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: rotate(-45deg);
+  font-weight: 900;
+}
+.play-circle {
+  position: absolute;
+  height: 45px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play {
+  color: #000000;
+}
+/* CENTRE (Featured Project) */
+.center {
+  grid-area: swan;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.center img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ASIDE (Achievements) */
+.right {
+  grid-area: achievements;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.center-right1 {
+  height: 50%;
+  width: 100%;
+  background-color: #a8dad7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.center-right1 h3 {
+  font-family: "NorwigeExtraBold", sans-serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.center-right1 p {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.center-right2 {
+  height: 50%;
+  width: 100%;
+  background-color: #8e6fbd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.center-right2 h3 {
+  color: #fff;
+  font-family: "NorwigeExtraBold", sans-serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.center-right2 p {
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* BOTTOM CENTER (Clients) */
+.bottom_center {
+  grid-area: apple;
+  border-radius: 20px;
+  background: #595959;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.apple_logo {
+  color: #fff;
+  font-size: 45px;
+}
+
+.bottom_center h3 {
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* FOOTER (Awards) */
+.bottom_right {
+  grid-area: last;
+  border-radius: 20px;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.bottom_right1 {
+  height: 100%;
+  width: 40%;
+  margin: 0;
+}
+
+.bottom_right1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.bottom_right2 {
+  height: 100%;
+  width: 60%;
+  background-color: #fbc760;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+.bottom_right2 h3 {
+  font-family: "NorwigeExtraBold", sans-serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+}
+
+.bottom_right2 p {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.bottom_right2 span {
+  display: block;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+/* SHARED CHEVRON */
+.chevron {
+  font-size: 1rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: rotate(-45deg);
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   GLOBAL SMOOTHNESS
+========================= */
+
+* {
+  transition: all 0.35s ease;
+}
+
+body {
+  animation: pageFade 1s ease;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* PORTFOLIO TITLE ANIMATION */
+
+.portfolio h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.5s ease forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* HERO TEXT ANIMATION */
+
+.hero-info {
+  animation: slideUp 1.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* NAV LINKS HOVER */
+
+.nav_links a {
+  position: relative;
+}
+
+.nav_links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: black;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav_links a:hover::after {
+  width: 100%;
+}
+
+.nav_links a:hover {
+  transform: rotate(-90deg) scale(1.15);
+  color: #8184d4;
+}
+
+/* MOBILE NAV FIX */
+
+@media (max-width: 768px) {
+  .nav_links a:hover {
+    transform: scale(1.08);
+  }
+}
+
+/* PLAY BUTTON EFFECT*/
+
+.play-circle {
+  transition: all 0.4s ease;
+}
+
+.play-circle:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  backdrop-filter: blur(35px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* CARDS HOVER EFFECT */
+
+.center:hover,
+.bottom_center:hover,
+.right:hover,
+.bottom_right:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE FLOATING EFFECT */
+
+.bottom_right1 img {
+  animation: floatSphere 4s ease-in-out infinite;
+}
+
+@keyframes floatSphere {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* CHEVRON HOVER */
+
+.chevron {
+  transition: all 0.4s ease;
+}
+
+.center:hover .chevron,
+.bottom_center:hover .chevron,
+.center-right1:hover .chevron,
+.center-right2:hover .chevron,
+.bottom_right2:hover .chevron {
+  transform: rotate(0deg) scale(1.3);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* APPLE ICON GLOW */
+
+.apple_logo {
+  transition: all 0.4s ease;
+}
+
+.bottom_center:hover .apple_logo {
+  transform: scale(1.2);
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/* NUMBER POP EFFECT */
+
+.center-right1 h3,
+.center-right2 h3,
+.bottom_right2 h3 {
+  transition: transform 0.4s ease;
+}
+
+.center-right1:hover h3,
+.center-right2:hover h3,
+.bottom_right2:hover h3 {
+  cursor: default;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .nav {
+    width: 100%;
+    height: 50px;
+    order: -2;
+    background: #f8f8f8;
+  }
+
+  .nav_links {
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+
+  .nav_links a {
+    transform: rotate(0deg);
+    font-size: 0.75rem;
+  }
+
+  .portfolio {
+    order: -1;
+    height: 100px;
+    padding: 0;
+    justify-content: center;
+  }
+  .portfolio h1 {
+    font-size: 4.5rem;
+    position: static;
+  }
+  .portfolio i {
+    display: none;
+  }
+
+  .main_img {
+    height: 500px;
+    width: 100%;
+  }
+  .intro {
+    font-size: 2.8rem;
+  }
+
+  .right {
+    height: 300px;
+  }
+
+  .center-right1 h3,
+  .center-right2 h3,
+  .bottom_right2 h3 {
+    font-size: 36px;
+  }
+
+  .bottom_center {
+    height: 200px;
+  }
+
+  .bottom_right {
+    flex-direction: column;
+    height: auto;
+  }
+  .bottom_right1,
+  .bottom_right2 {
+    width: 100%;
+    height: 200px;
+  }
+}
