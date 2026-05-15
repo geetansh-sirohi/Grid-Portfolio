@@ -33,7 +33,7 @@ body {
   grid-template-rows: 30% 40% 30%;
   grid-template-areas:
     "navbar hero heading heading heading"
-    "navbar hero swan swan achievements"
+    "navbar hero centre centre achievements"
     "navbar hero apple last last";
 }
 
@@ -198,7 +198,7 @@ body {
 }
 /* CENTRE (Featured Project) */
 .center {
-  grid-area: swan;
+  grid-area: centre;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
