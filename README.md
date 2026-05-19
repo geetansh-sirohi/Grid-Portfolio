@@ -78,4 +78,6 @@ Download the ZIP → Extract → Open `index.html` in your browser. Done.
  
 [GitHub](https://github.com/geetansh-sirohi) · [Instagram](https://www.instagram.com/code.with.geetansh/) · [LinkedIn](https://www.linkedin.com/in/geetansh-sirohi/)
  
-*---------------------------------------*
+---
+
+*Built during Sheryians Coding School · Cohort 3.0 · Frontend Assignment · Class 10th*
