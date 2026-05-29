@@ -76,7 +76,7 @@ Download the ZIP → Extract → Open `index.html` in your browser. Done.
  
 ## 🌐 Connect With Me
  
-[GitHub](https://github.com/geetansh-sirohi) · [Instagram](https://www.instagram.com/code.with.geetansh/) · [LinkedIn](https://www.linkedin.com/in/geetansh-sirohi/)
+[GitHub](https://github.com/geetansh-sirohi) · [Instagram](https://www.instagram.com/code.with.geetansh) · [LinkedIn](https://www.linkedin.com/in/geetansh-sirohi)
  
 ---
 
